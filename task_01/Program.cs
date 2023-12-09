@@ -46,14 +46,9 @@ string GetStringFromCharArray(char[,] simbolMatrix) // Метод принима
 // возвращает строку из этих символов.
 {
     string str = String.Empty;
-    { 
-        for (int m = 0; m < simbolMatrix.GetLength(0); m++)
-        {
-            for (int n = 0; n < simbolMatrix.GetLength(1); n++)
-            {
-                str += simbolMatrix[m, n];
-            }
-        }
+    foreach (char item in simbolMatrix)
+    {
+        str += item;
     }
     return str;
 }
@@ -63,5 +58,3 @@ PrintCharMatrix(simbolMatrix);
 Console.WriteLine();
 Console.WriteLine(GetStringFromCharArray(simbolMatrix));
 // PrintCharMatrixToString(simbolMatrix);
-
-
